@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión de Estudiantes</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <aside class="panel-lateral">
+    <h2>Panel del Sistema</h2>
+    <nav>
+      <ul>
+        <li><a href="#">Panel</a></li>
+        <li><a href="#">Alumnos</a></li>
+        <li><a href="#">Informes</a></li>
+        <li><a href="#">Ayuda</a></li>
+        <li><a href="#">Configuración</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="contenido-principal">
+    <header class="barra-superior">
+      <button id="btnTogglePanel">Ocultar Menú</button>
+      <div class="enlaces-superiores">
+        <a href="#">Inicio</a>
+        <a href="#">Acceder</a>
+      </div>
+    </header>
+
+    <section class="seccion-formulario">
+      <h1>Nuevo Registro</h1>
+      <div class="fila-formulario">
+        <input type="text" id="inputNombre" placeholder="Nombre completo" />
+        <input type="number" id="inputEdad" placeholder="Edad" />
+      </div>
+      <div class="fila-formulario">
+        <input type="text" id="inputGrado" placeholder="Nivel o Grado" />
+        <input type="text" id="inputSeccion" placeholder="Grupo o Sección" />
+      </div>
+      <div class="botones-formulario">
+        <button id="btnGuardarAlumno" class="boton-verde">Guardar</button>
+        <button id="btnResetFormulario" class="boton-rojo">Limpiar</button>
+      </div>
+    </section>
+
+    <section class="seccion-listado">
+      <h2>Lista de Alumnos</h2>
+      <input type="text" id="inputBuscarAlumno" placeholder="Buscar por nombre" />
+      <button id="btnBuscarAlumno">Buscar</button>
+
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Grado</th>
+            <th>Sección</th>
+            <th>Opciones</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpoTablaAlumnos">
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
